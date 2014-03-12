@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Data Visualization Using D3</title>
+
+		<meta name="description" content="This is the content for GDI Boulder's first D3 workshop taught by Michael Kelly. It is intended to be taught as a 3 hour workshop.">
+		<meta name="author" content="Girl Develop It/Michael Kelly">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+
+		<!-- If use the PDF print sheet so students can print slides-->
+		
+		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+    <style>
+      code.html {font-size: 130%;}
+    </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<!-- Opening slide -->
+					<h2>Welcome!</h2>
+					<p>Wifi Info</p>
+					<p><strong>Network:</strong> Simple Energy Guest</p>
+					<p><strong>Password:</strong> domorefaster</p>
+			    </section>
+
+			    <!-- Welcome-->
+		        <section class="hide-pdf">
+		          <h3>Welcome!</h3>
+		          <div class = "left-align">
+		          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+		          <p class ="green">Some "rules"</p>
+		          <ul>
+		            <li>We are here for you!</li>
+		            <li>Every question is important</li>
+		            <li>Help each other</li>
+		            <li>Have fun</li>
+		          </ul>
+		          </div>
+		        </section>
+
+		        <section>
+		          <h3>Thanks to our sponsor</h3>
+		          <img src="images/simpleenergy.jpeg" />
+		        </section>
+
+		        <section>
+		          <h3>Data Visualization Using D3</h3>
+		          <h4>Our Instructor!</h4>
+		          <p>Michael Kelly, a designer who specializes in data visualization and interaction</p>
+        		</section>
+
+
+        		<!-- CONTENT HERE -->
+
+        		<section>
+        			<h4>Go Code Colorado Kick-Off</h4>
+        			<p>Wednesday March 19th</p>
+        			<h4>Code and Cocktails</h4>
+        			<p>Wednesday March 26th</p>
+        			<h4>Intro to HTML/CSS</h4>
+        			<p>March 29th &amp; 30th</p>
+        		</section>
+			</div>
+  		<footer>
+        <div class="copyright">
+          HTML/CSS &hearts; Girl Develop It Boulder 
+          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+        </div>
+      </footer>
+		</div>
+
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
