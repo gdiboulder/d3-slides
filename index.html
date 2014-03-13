@@ -6,18 +6,19 @@
 
 		<title>Data Visualization Using D3</title>
 
-		<meta name="description" content="This is the content for GDI Boulder's first D3 workshop taught by Michael Kelly. It is intended to be taught as a 3 hour workshop.">
+		<meta name="description" content="This is the content for GDI Boulder"s first D3 workshop taught by Michael Kelly. It is intended to be taught as a 3 hour workshop.">
 		<meta name="author" content="Girl Develop It/Michael Kelly">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme">
+		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+		<!-- <link rel="stylesheet" href="reveal/css/theme/gdilight.css" id="theme"> -->
 
 		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/light.css">
+		<!-- light editor<link rel="stylesheet" href="reveal/lib/css/light.css">-->
+		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
 		<!-- If use the PDF print sheet so students can print slides-->
 		
@@ -26,9 +27,9 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
-    <style>
-      code.html {font-size: 130%;}
-    </style>
+	<style>
+		code.html {font-size: 130%;}
+	</style>
 	</head>
 
 	<body>
@@ -43,52 +44,248 @@
 					<p>Wifi Info</p>
 					<p><strong>Network:</strong> Simple Energy Guest</p>
 					<p><strong>Password:</strong> domorefaster</p>
-			    </section>
+				</section>
 
-			    <!-- Welcome-->
-		        <section class="hide-pdf">
-		          <h3>Welcome!</h3>
-		          <div class = "left-align">
-		          <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-		          <p class ="green">Some "rules"</p>
-		          <ul>
-		            <li>We are here for you!</li>
-		            <li>Every question is important</li>
-		            <li>Help each other</li>
-		            <li>Have fun</li>
-		          </ul>
-		          </div>
-		        </section>
+				<!-- Welcome-->
+				<section class="hide-pdf">
+					<h3>Welcome!</h3>
+					<div class = "left-align">
+					<p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
+					<p class ="green">Some "rules"</p>
+					<ul>
+					<li>We are here for you!</li>
+					<li>Every question is important</li>
+					<li>Help each other</li>
+					<li>Have fun</li>
+					</ul>
+					</div>
+				</section>
 
-		        <section>
-		          <h3>Thanks to our sponsor</h3>
-		          <img src="images/simpleenergy.jpeg" />
-		        </section>
+				<section>
+					<h3>Thanks to our sponsor</h3>
+					<img src="images/simpleenergy.jpeg" />
+				</section>
 
-		        <section>
-		          <h3>Data Visualization Using D3</h3>
-		          <h4>Our Instructor!</h4>
-		          <p>Michael Kelly, a designer who specializes in data visualization and interaction</p>
-        		</section>
+				<section>
+					<h4>Go Code Colorado Kick-Off</h4>
+					<p>Wednesday March 19th</p>
+					<h4>Code and Cocktails</h4>
+					<p>Wednesday March 26th</p>
+					<h4>Intro to HTML/CSS</h4>
+					<p>March 29th &amp; 30th</p>
+				</section>
 
+				<section>
+					<h3>Data Visualization With D3</h3>
+					<h4>Our Instructor!</h4>
+					<p>Michael Kelly, designer and web-monkey specializing in data visualization and interaction</p>
+				</section>
 
-        		<!-- CONTENT HERE -->
+				<section>
+					<section>
+						<h3>What is Data Visualization?</h3>
+					</section>
+					<section>
+						<img width="512" alt="Playfair TimeSeries" src="http://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Playfair_TimeSeries.png/512px-Playfair_TimeSeries.png"/>
+						<small>By William Playfair (1759-1823), via Wikimedia Commons</small>
+					</section>
+					<section>
+						<a href="http://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png"><img src="http://upload.wikimedia.org/wikipedia/commons/2/29/Minard.png"/></a>
+						<small>By Charles Minard (1781-1870) [Public domain], via Wikimedia Commons</small>
+					</section>
+					<section>
+						<img width="512" alt="Snow-cholera-map-1" src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Snow-cholera-map-1.jpg/512px-Snow-cholera-map-1.jpg"/>
+						<small>By John Snow (1813–1858), from Wikimedia Commons</small>
+					</section>
+					<section>
+						<a href="http://upload.wikimedia.org/wikipedia/commons/1/17/Nightingale-mortality.jpg"><img src="http://upload.wikimedia.org/wikipedia/commons/1/17/Nightingale-mortality.jpg"/></a>
+						<small>By Florence Nightingale (1820–1910), via Wikimedia Commons</small>
+					</section>
+					<section>
+						<embed height="600" width="1100" src="http://extremepresentation.typepad.com/files/choosing-a-good-chart-09.pdf"/>
+						<small>By Andrew Abela from <a href="http://extremepresentation.typepad.com/blog/2006/09/choosing_a_good.html">a post on Extreme Presentation</a></small>
+					</section>
+				</section>
+				<section>
+					<h3>What is D3?</h3>
+					<ul>
+						<li>JavaScript Library</li>
+						<li>Makes hard stuff easy(er)</li>
+						<li>Uses SVG / HTML / CSS</li>
+						<li>Not a charting engine</li>
+					</ul>
+				</section>
+				<section>
+					<h3>What can you do with D3</h3>
+					<ul>
+						<li><a href="https://github.com/mbostock/d3/wiki/Gallery">Official D3 Gallery</a></li>
+						<li><a href="http://bl.ocks.org/mbostock">Bostock"s Gists</a></li>
+						<li><a href="http://www.nytimes.com/interactive/2012/11/02/us/politics/paths-to-the-white-house.html">A </a><a href="http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html">few</a> <a href="http://www.nytimes.com/interactive/2012/11/30/us/tax-burden.html">examples</a> from the New York Times</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Let"s get started!</h3>
+					<p>First, we need a local web server.</p>
+					<p>Mac terminal: sudo python -m SimpleHTTPServer 80</p>
+					<p>PC: Ask Kate</p>
+				</section>
+				<section>
+					<h3>index.html</h3>
+					<p>Final product sneak peek!</p>
+				</section>
+				<section>
+					<section>
+						<h3>Step 1 - The Basics</h3>
+						<p>Let's starting in the console.</p>
+					</section>
+					<section>
+						<h3>Step1.html</h3>
+						<pre><code class="javascript">
+var body = d3.select("body");
+var p = body.append("html:p");
+p.text("Don't be shy...");
+						</code></pre>
+					</section>
+					<section>
+						<h3>Chaining</h3>
+						<pre><code class="javascript">
+d3.select("body")
+	.append("html:p")
+	.text("...develop it!")
+	.style("color", "pink")
+;
+						</code></pre>
+					</section>
+					<section>
+						<h3>To your text editors!</h3>
+						<p>Step1.js</p>
+					</section>
+					<section>
+						<h3>What on earth is "dv"?</h3>
+						<pre><code class="javascript">
+var dv = {
+  axis: {},
+  data: {
+    sub: [],
+    max: {}
+  },
+  draw: {},
+  format: {},
+  get: {},
+  html: {},
+  opt: {
+    height: 500,
+    width: 700,
+    pad: 30,
+    radius: {
+      min: 5,
+      max: 50
+    },
+    fill: ['#0033CC', '#00CC33'],
+    countries: ['Afghanistan','Argentina','Bangladesh','Canada','China','Egypt','Ethiopia','Greece','India','Iran','Nigeria','Russia','Saudi Arabia','Singapore','South Africa','United Kingdom','United States','Vietnam'],
+    year: {
+      start: 1950,
+      end: 2012
+    },
+    speed: 750
+  },
+  setup: {},
+  scale: {},
+  state: {
+    year: 1950
+  },
+  svg: {},
+  update: {}
+};
+						</code></pre>
+					</section>
+					<section>
+						<h3>Let's get coding!</h3>
+						<pre><code class="javascript">
+/* Step 1 Basic SVG
+  // We need an SVG element in the DOM so we can append other SVG shapes and have them render properly (circles, lines, etc.)
+  // Use the append function to add an SVG element to the main body
+  // Use dv.opt.w and dv.opt.h for the height and width of the element
 
-        		<section>
-        			<h4>Go Code Colorado Kick-Off</h4>
-        			<p>Wednesday March 19th</p>
-        			<h4>Code and Cocktails</h4>
-        			<p>Wednesday March 26th</p>
-        			<h4>Intro to HTML/CSS</h4>
-        			<p>March 29th &amp; 30th</p>
-        		</section>
+// This is the main svg object
+dv.draw.main = function() {
+  dv.svg.main = d3.select('CSS SELECTOR').append('svg:svg')
+    .attr('ATTRIBUTE NAME', 'VALUE')
+    .attr('ATTRIBUTE NAME', 'VALUE')
+  ;
+};
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>2. Getting Data</h3>
+						<pre><code class="javascript">
+d3.csv('folder/data.csv', function(error, data) {
+  console.log(data);
+};
+					</code></pre>
+					</section>
+					<section>
+						<h3>What just happened?</h3>
+						<p>Let's talk about asynchronous functions.</p>
+					</section>
+				</section>
+				<section>
+					<h3>3. Getting Lots of Data</h3>
+					<p>Chaining calls together</p>
+				</section>
+				<section>
+					<h3>4. Adding SVG with Data</h3>
+					<pre><code class="javascript">
+d3.select('svg').append('svg:circle')
+  .selectAll('circle')
+  .data(data)
+  .enter().append('svg:circle')
+  	.attr('cx', function(d, i { return d * i; })
+  	.attr('cy', 10)
+  	.attr('r', 10)
+ ;
+					</code></pre>
+				</section>
+				<section>
+					<h3>5. Scaling the Data</h3>
+					<pre><code class="javascript">
+var xScale = d3.scale.linear()
+  .domain([0, 50000])
+  .range([0, 100])
+;
+
+xScale(25000); // Returns 50
+					</code></pre>
+				</section>
+				<section>
+					<h3>6. Updating</h3>
+					<pre><code class="javascript">
+dv.svg.bubbles
+  .transition().duration(500)
+    .attr('cx', function(d) { return d; })
+    .attr('cy', function(d, i) { return i; })
+;
+					</code></pre>
+				</section>
+				<section>
+					<h3>7. Hovers!</h3>
+					<p>No new d3 functions here.</p>
+					<small>Except formatters, and they're dumb.</small>
+				</section>
+				<section>
+					<h3>That's it!</h3>
+					<p>You developed it!</p>
+				</section>
+
 			</div>
-  		<footer>
-        <div class="copyright">
-          HTML/CSS &hearts; Girl Develop It Boulder 
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-        </div>
-      </footer>
+			<footer>
+		<div class="copyright">
+			D3 &hearts; Girl Develop It Boulder 
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+		</div>
+		</footer>
 		</div>
 
 
@@ -105,16 +302,16 @@
 				history: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+				transition: Reveal.getQueryHash().transition || "linear", // default/cube/page/concave/zoom/linear/none
 
 				// Optional libraries used to extend on reveal.js
 				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: "reveal/lib/js/classList.js", condition: function() { return !document.body.classList; } },
+					{ src: "reveal/plugin/markdown/showdown.js", condition: function() { return !!document.querySelector( "[data-markdown]" ); } },
+					{ src: "reveal/plugin/markdown/markdown.js", condition: function() { return !!document.querySelector( "[data-markdown]" ); } },
+					{ src: "reveal/plugin/highlight/highlight.js", async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: "reveal/plugin/zoom-js/zoom.js", async: true, condition: function() { return !!document.body.classList; } },
+					{ src: "reveal/plugin/notes/notes.js", async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
 
